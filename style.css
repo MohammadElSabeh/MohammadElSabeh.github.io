@@ -2,6 +2,11 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: Harriet Display;
+  src: url('/fonts/Harriet/Harriet\ Display\ Regular.otf');
+}
+
 a {
   color: inherit;
   text-decoration: none;
