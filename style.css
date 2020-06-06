@@ -37,8 +37,6 @@ body {
 
 .main-layout {
   display: grid;
-  width: 100%;
-  height: 100%;
 }
 
 .main-nav {
@@ -195,12 +193,19 @@ body {
     --main-menu-verbose-font-size: 17px;
   }
 
+  .no-menu,
+  .no-menu > * {
+    --seperation-size: 70px;
+  }
+
   .no-menu {
     grid-template-columns: 31px minmax(0, 1fr) minmax(0, 1fr) 31px;
-    grid-template-rows: 31px 15px 1fr auto 1fr;
+    grid-template-rows: 31px 15px var(--seperation-size) auto var(--seperation-size);
   }
 
   .show-menu {
+    height: 100%;
+    width: 100%;
     grid-template-columns: 31px minmax(0, 1fr) minmax(0, 1fr) 31px;
     grid-template-rows: 31px 15px 1fr 53px;
   }
@@ -250,11 +255,20 @@ body {
   .no-menu .light-dark-toggle {
     display: none;
   }
+
+  .work-glimpse {
+    display: none;
+  }
 }
 
 @media only screen
         and (min-aspect-ratio: 100/100) 
         and (max-aspect-ratio: 25/10) {
+  .main-layout {
+    width: 100%;
+    height: 100%;
+  }
+
   .main-nav ul {
     display: flex;
     justify-content: space-between;
@@ -705,24 +719,58 @@ body {
   }
 
   .work-glimpse > .leaving {
-    animation: calc(500ms + 5ms) fadeOut ease-in-out;
+    animation: 300ms widthContract cubic-bezier(.25,.1,.25,1);
   }
 
   .work-glimpse > .entering {
-    animation: calc(500ms + 5ms) fadeIn ease-in-out;
+    animation: 300ms widthExpand cubic-bezier(.25,.1,.25,1);
   }
 
-@keyframes fadeOut {
+@keyframes widthExpand {
     from {
-      opacity: 1;
+      max-width: 0;
     }
 
     to {
-      opacity: 1;
+      max-width: 100vh;
     }
 }
 
-@keyframes fadeIn {
+@keyframes widthContract {
+    from {
+      max-width: 100vh;
+    }
+
+    to {
+      max-width: 0;
+    }
+}
+
+  .left-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+  }
+
+  .left-section > * {
+    position: initial !important;
+    height: auto !important;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .left-section > .entering {
+    animation: 300ms widthExpand cubic-bezier(.25,.1,.25,1);
+  }
+
+  .left-section > .leaving {
+    animation: 300ms widthContract cubic-bezier(.25,.1,.25,1);
+  }
+
+@keyframes dummyAnim {
     from {
       opacity: 1;
     }
@@ -752,16 +800,4 @@ body {
     grid-row-start: 4;
     grid-row-end: 5;
   }
-}
-
-html.light-mode {
-  --bg-color: #efefef;
-  --idle-color: #a5a5a5;
-  --focus-color: #707070;
-}
-
-html.dark-mode {
-  --bg-color: #393939;
-  --idle-color: #a5a5a5;
-  --focus-color: #efefef;
 }
