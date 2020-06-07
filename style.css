@@ -719,11 +719,11 @@ body {
   }
 
   .work-glimpse > .leaving {
-    animation: 300ms widthContract cubic-bezier(.25,.1,.25,1);
+    animation: 600ms widthContract cubic-bezier(.25,.1,.25,1);
   }
 
   .work-glimpse > .entering {
-    animation: 300ms widthExpand cubic-bezier(.25,.1,.25,1);
+    animation: 600ms widthExpand cubic-bezier(.25,.1,.25,1);
   }
 
 @keyframes widthExpand {
@@ -763,11 +763,11 @@ body {
   }
 
   .left-section > .entering {
-    animation: 300ms widthExpand cubic-bezier(.25,.1,.25,1);
+    animation: 600ms widthExpand cubic-bezier(.25,.1,.25,1);
   }
 
   .left-section > .leaving {
-    animation: 300ms widthContract cubic-bezier(.25,.1,.25,1);
+    animation: 600ms widthContract cubic-bezier(.25,.1,.25,1);
   }
 
 @keyframes dummyAnim {
