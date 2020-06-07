@@ -719,11 +719,11 @@ body {
   }
 
   .work-glimpse > .leaving {
-    animation: 600ms widthContract ease-in-out;
+    animation: 300ms widthContract ease-in-out;
   }
 
   .work-glimpse > .entering {
-    animation: 600ms widthExpand ease-in-out;
+    animation: 300ms widthExpand ease-in-out;
   }
 
 @keyframes widthExpand {
@@ -763,11 +763,11 @@ body {
   }
 
   .left-section > .entering {
-    animation: 600ms widthExpand ease-in-out;
+    animation: 300ms widthExpand ease-in-out;
   }
 
   .left-section > .leaving {
-    animation: 600ms widthContract ease-in-out;
+    animation: 300ms widthContract ease-in-out;
   }
 
 @keyframes dummyAnim {
@@ -785,7 +785,47 @@ body {
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
   }
+
+  .center-section > * {
+    position: initial !important;
+    height: auto !important;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .center-section > .entering {
+    animation: 300ms fadeOut ease-in-out;
+  }
+
+  .center-section > .leaving {
+    animation: 300ms fadeIn ease-in-out;
+  }
+
+@keyframes fadeIn {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+}
 
   .social-media {
     grid-column-start: 3;
