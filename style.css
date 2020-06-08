@@ -668,6 +668,22 @@ body {
     grid-template-rows: var(--general-gap-top) var(--main-menu-height) 1fr var(--footer-height);
   }
 
+  .main-layout > * {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    overflow: hidden;
+  }
+
+  .main-layout > * > * {
+    position: initial !important;
+    height: auto !important;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
   .menu-toggle {
     display: none;
   }
@@ -702,22 +718,6 @@ body {
     grid-row-end: 5;
   }
 
-  .work-glimpse {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    overflow: hidden;
-  }
-
-  .work-glimpse > * {
-    position: initial !important;
-    height: auto !important;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
   .work-glimpse > .leaving {
     animation: 300ms widthContract ease-in-out;
   }
@@ -732,35 +732,19 @@ body {
     }
 
     to {
-      max-width: 100vh;
+      max-width: calc(100vh * 0.69);
     }
 }
 
 @keyframes widthContract {
     from {
-      max-width: 100vh;
+      max-width: calc(100vh * 0.69);
     }
 
     to {
       max-width: 0;
     }
 }
-
-  .left-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    overflow: hidden;
-  }
-
-  .left-section > * {
-    position: initial !important;
-    height: auto !important;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
 
   .left-section > .entering {
     animation: 300ms widthExpand ease-in-out;
@@ -785,31 +769,23 @@ body {
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: minmax(0, 1fr);
-  }
-
-  .center-section > * {
-    position: initial !important;
-    height: auto !important;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
   }
 
   .center-section > .entering {
-    animation: 300ms fadeOut ease-in-out;
+    animation: fadeOut 150ms ease-in-out 150ms both;
   }
 
   .center-section > .leaving {
-    animation: 300ms fadeIn ease-in-out;
+    animation: fadeIn 300ms ease-in-out;
   }
 
 @keyframes fadeIn {
     from {
       opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
     }
 
     to {
