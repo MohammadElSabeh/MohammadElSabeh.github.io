@@ -593,6 +593,70 @@ body {
     grid-row-end: 5;
   }
 
+  .center-section > .entering {
+    animation: fadeOut 150ms ease-in-out 150ms both;
+  }
+
+  .center-section > .leaving {
+    animation: fadeIn 150ms ease-in-out;
+  }
+
+  .work-glimpse > .entering {
+    animation: fadeOut 150ms ease-in-out 150ms both;
+  }
+
+  .work-glimpse > .leaving {
+    animation: fadeIn 150ms ease-in-out;
+  }
+
+@keyframes fadeIn {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes widthExpand {
+    from {
+      max-width: 0;
+    }
+
+    to {
+      max-width: calc(100vh * 0.69);
+    }
+}
+
+@keyframes widthContract {
+    from {
+      max-width: calc(100vh * 0.69);
+    }
+
+    to {
+      max-width: 0;
+    }
+}
+
+  .left-section > .entering {
+    animation: 300ms widthExpand ease-in-out;
+  }
+
+  .left-section > .leaving {
+    animation: 300ms widthContract ease-in-out;
+  }
+
   .light-dark-toggle {
     grid-column-start: 5;
     grid-column-end: 6;
@@ -766,16 +830,12 @@ body {
   }
 
   .center-section > .leaving {
-    animation: fadeIn 300ms ease-in-out;
+    animation: fadeIn 150ms ease-in-out both;
   }
 
 @keyframes fadeIn {
     from {
       opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
     }
 
     to {
