@@ -27,7 +27,7 @@ body {
   background-color: var(--bg-color);
   box-sizing: border-box;
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 *.disabled-transitions {
@@ -36,6 +36,8 @@ body {
 }
 
 .main-layout {
+  width: 100%;
+  height: 100%;
   display: grid;
 }
 
@@ -196,11 +198,6 @@ body {
 @media only screen
         and (min-aspect-ratio: 300/640) 
         and (max-aspect-ratio: 400/640) {
-  body {
-    height: 100vh;
-    width: 100vw;
-  }
-
   .main-nav {
     --main-menu-main-font-size: 48px;
     --main-menu-verbose-font-size: 17px;
@@ -212,14 +209,11 @@ body {
   }
 
   .no-menu {
-    height: 100%;
     grid-template-columns: 31px minmax(0, 1fr) minmax(0, 1fr) 31px;
     grid-template-rows: 31px 15px 31px auto 68px;
   }
 
   .show-menu {
-    height: 100vh;
-    width: 100vw;
     grid-template-columns: 31px minmax(0, 1fr) minmax(0, 1fr) 31px;
     grid-template-rows: 31px 15px 1fr 53px 68px;
   }
