@@ -94,20 +94,6 @@ body {
   transition: color 10s;
 }
 
-.light-dark-toggle ul li.activated {
-  background-image: linear-gradient(to top, var(--focus-color) 20%, transparent 0);
-  background-size: 100% 100%;
-  transition: color 10s;
-}
-
-.light-dark-toggle ul li span {
-  cursor: pointer;
-  font-family: Harriet Text;
-  font-size: var(--light-dark-toggle-font-size);
-  color: var(--focus-color);
-  transition: color 10s;
-}
-
 .menu-toggle {
   color: var(--focus-color);
   font-family: Helvetica;
@@ -186,6 +172,20 @@ body {
     transition: color 10s;
   }
 
+  .light-dark-toggle ul li.activated {
+    background-image: linear-gradient(to top, var(--focus-color) 20%, transparent 0);
+    background-size: 100% 100%;
+    transition: color 10s;
+  }
+
+  .light-dark-toggle ul li span {
+    cursor: pointer;
+    font-family: Harriet Text;
+    font-size: var(--light-dark-toggle-font-size);
+    color: var(--focus-color);
+    transition: color 10s;
+  }
+
   .social-media ul {
     width: 100%;
     height: 100%;
@@ -215,7 +215,7 @@ body {
 
   .show-menu {
     grid-template-columns: 31px minmax(0, 1fr) minmax(0, 1fr) 31px;
-    grid-template-rows: 31px 15px 1fr 53px 68px;
+    grid-template-rows: 31px 15px 1fr 68px 53px;
   }
 
   .main-logo {
@@ -259,15 +259,29 @@ body {
     display: none;
   }
 
-  .social-media {
+  .no-menu .social-media {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 5;
     grid-row-end: 6;
   }
 
+  .show-menu .social-media {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
   .no-menu .light-dark-toggle {
     display: none;
+  }
+
+  .show-menu .light-dark-toggle {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
   }
 
   .work-glimpse {
@@ -338,6 +352,20 @@ body {
   .light-dark-toggle ul li {
     display: inline-block;
     height: 100%;
+  }
+
+  .light-dark-toggle ul li.activated {
+    background-image: linear-gradient(to top, var(--focus-color) 20%, transparent 0);
+    background-size: 100% 100%;
+    transition: color 10s;
+  }
+
+  .light-dark-toggle ul li span {
+    cursor: pointer;
+    font-family: Harriet Text;
+    font-size: var(--light-dark-toggle-font-size);
+    color: var(--focus-color);
+    transition: color 10s;
   }
 
   .light-dark-toggle ul li span {
