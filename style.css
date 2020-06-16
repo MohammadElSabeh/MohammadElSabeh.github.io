@@ -196,6 +196,11 @@ body {
 @media only screen
         and (min-aspect-ratio: 300/640) 
         and (max-aspect-ratio: 400/640) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
   .main-nav {
     --main-menu-main-font-size: 48px;
     --main-menu-verbose-font-size: 17px;
