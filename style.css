@@ -15,6 +15,12 @@ li {
   padding: 0;
 }
 
+@font-face {
+  font-family: Harriet Display;
+  font-weight: bold;
+  src: url(fonts/Harriet/Harriet_Display_Bold.otf);
+}
+
 .st0 {
   enable-background: new;
 }
