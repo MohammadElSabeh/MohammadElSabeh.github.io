@@ -21,6 +21,11 @@ li {
   src: url(fonts/Harriet/Harriet_Display_Bold.otf);
 }
 
+@font-face {
+  font-family: Harriet Text;
+  src: url(fonts/Harriet/Harriet_Text_Regular.otf);
+}
+
 .st0 {
   enable-background: new;
 }
