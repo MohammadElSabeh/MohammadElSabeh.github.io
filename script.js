@@ -865,7 +865,7 @@ eval("const {LitElement, html, css, unsafeCSS} = __webpack_require__(/*! lit-ele
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"@media only screen\\n       and (min-aspect-ratio: 115/100)\\n       and (max-aspect-ratio: 25/10) {\\n  :host {\\n    width: calc(100vh * 0.707);\\n    height: 100vh;\\n  }\\n\\n  :host > * {\\n    width: 100%;\\n    height: 100%;\\n  }\\n}\");\n\n//# sourceURL=webpack:///./screens/about/about-left-section.ccss?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"@media only screen\\n       and (min-aspect-ratio: 115/100)\\n       and (max-aspect-ratio: 25/10) {\\n  :host {\\n    height: 100vh;\\n  }\\n\\n  :host > * {\\n    width: calc(100vh * 0.707);\\n    height: 100%;\\n  }\\n}\");\n\n//# sourceURL=webpack:///./screens/about/about-left-section.ccss?");
 
 /***/ }),
 
