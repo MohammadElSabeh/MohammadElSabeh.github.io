@@ -697,13 +697,13 @@ body {
     }
 
     to {
-      max-width: calc(100vh * 0.69);
+      max-width: calc(100vh * 0.707);
     }
 }
 
 @keyframes widthContract {
     from {
-      max-width: calc(100vh * 0.69);
+      max-width: calc(100vh * 0.707);
     }
 
     to {
@@ -858,13 +858,13 @@ body {
     }
 
     to {
-      max-width: calc(100vh * 0.69);
+      max-width: calc(100vh * 0.707);
     }
 }
 
 @keyframes widthContract {
     from {
-      max-width: calc(100vh * 0.69);
+      max-width: calc(100vh * 0.707);
     }
 
     to {
