@@ -349,16 +349,16 @@ function(n){var t,e,a,r,i,o,s,c,l,m,f,d,u,p,h,b,g,w,k,y="sizzle"+1*new Date,v=n.
           <fit-text-layout class='name-div'>
             <span class='collaboration-question'>Up for a collaboration? Contact me here!</span>
           </fit-text-layout>
-          <div class='information-section'>
+          <fit-text-layout class='information-section'>
               <span>Beirut, Lebanon</span>
               <span>+961 71 79 72 83</span>
               <span>mohamad.ms273@gmail.com</span>
-          </div>
+          </fit-text-layout>
         </div>
       `}static get styles(){return[i`
          * {
            transition: var(--theme-change-transition) !important;
-         }`,o(e(49).default)]}}},function(n,t,e){"use strict";e.r(t),t.default=".contact-section {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n}\n\n.contact-section .collaboration-question {\n  font-family: Harriet Text;\n  color: var(--focus-color);\n}\n\n.contact-section .information-section span {\n  font-family: Helvetica;\n  font-size: 40px;\n  display: block;\n  text-align: center;\n  line-break: 100%;\n  color: var(--focus-color);\n}"},function(n,t,e){const{create:a,aspectRatioMedia:r}=e(2),i=e(4).mobile;n.exports=a("work",{"center-section":r(i.min,i.max,i.breakpoint)?e(51):e(53)})},function(n,t,e){const{LitElement:a,html:r,css:i,unsafeCSS:o}=e(0);n.exports=class extends a{render(){return r`
+         }`,o(e(49).default)]}}},function(n,t,e){"use strict";e.r(t),t.default=".contact-section {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n}\n\n.contact-section .collaboration-question {\n  font-family: Harriet Text;\n  color: var(--focus-color);\n}\n\n.contact-section .information-section {\n  width: 55%;\n  margin: 0 auto 0 auto;\n}\n\n.contact-section .information-section span {\n  font-family: Helvetica;\n  display: block;\n  text-align: center;\n  color: var(--focus-color);\n}"},function(n,t,e){const{create:a,aspectRatioMedia:r}=e(2),i=e(4).mobile;n.exports=a("work",{"center-section":r(i.min,i.max,i.breakpoint)?e(51):e(53)})},function(n,t,e){const{LitElement:a,html:r,css:i,unsafeCSS:o}=e(0);n.exports=class extends a{render(){return r`
         <paged-layout>
             <div class='center-page work-type-section'>
               <a href="/work/posters/">
