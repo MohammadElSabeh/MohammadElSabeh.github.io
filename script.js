@@ -337,7 +337,7 @@ function(n){var t,e,a,r,i,o,s,c,l,m,f,d,u,p,h,b,g,w,k,y="sizzle"+1*new Date,v=n.
       `}static get styles(){return[i`
          * {
            transition: var(--theme-change-transition) !important;
-         }`,o(e(44).default)]}}},function(n,t,e){"use strict";e.r(t),t.default=".about-section {\n  display: flex;\n  height: 100%;\n  flex-direction: column;\n  justify-content: space-evenly;\n}\n\n.about-subsection > * {\n  display: block;\n}\n\n.about-subsection .about-subsection-title {\n  margin-bottom: 13px;\n  font-family: Harriet Text;\n  color: var(--focus-color);\n  font-size: 33px;\n}\n\n.about-subsection .about-subsection-description {\n  font-family: Helvetica;\n  color: var(--focus-color);\n  font-size: 16px;\n}"},function(n,t,e){const{LitElement:a,html:r,css:i,unsafeCSS:o}=e(0);n.exports=class extends a{render(){return r`
+         }`,o(e(44).default)]}}},function(n,t,e){"use strict";e.r(t),t.default=".about-section {\n  display: flex;\n  height: 100%;\n  flex-direction: column;\n  justify-content: space-evenly;\n}\n\n.about-subsection > * {\n  display: block;\n}\n\n.about-subsection .about-subsection-title {\n  margin-bottom: calc(var(--min-width) * 0.018);\n  font-family: Harriet Text;\n  color: var(--focus-color);\n  font-size: 2.06em;\n}\n\n.about-subsection .about-subsection-description {\n  font-family: Helvetica;\n  color: var(--focus-color);\n  font-size: 1em;\n}"},function(n,t,e){const{LitElement:a,html:r,css:i,unsafeCSS:o}=e(0);n.exports=class extends a{render(){return r`
         <div>
             <custom-image src="images/portrait.png"></custom-image>
         </div>
